@@ -4,7 +4,7 @@ const ONE = {
     id: v4(),
     image: '/assets/technology/image-launch-vehicle-landscape.jpg',
     title: 'LAUNCH VEHICLE',
-    text: 'A launch vehicle or carrier rocket is a rocket-propelled vehicle used to carry a payload from Earths surface to space, usually to Earth orbit or beyond. Our WEB-X carrier rocket is the most powerful in operation. Standing 150 metres tall, its quite an awe-inspiring sight on the launch pad!'
+    text: "A launch vehicle or carrier rocket is a rocket-propelled vehicle used to carry a payload from Earth's surface to space, usually to Earth orbit or beyond. Our WEB-X carrier rocket is the most powerful in operation. Standing 150 metres tall, it's quite an awe-inspiring sight on the launch pad!"
 };
 
 const TWO = {
@@ -18,10 +18,10 @@ const THREE = {
     id: v4(),
     image: '/assets/technology/image-space-capsule-landscape.jpg',
     title: 'SPACE CAPSULE',
-    text: 'A space capsule is an often-crewed spacecraft that uses a blunt-body reentry capsule to reenter the Earths atmosphere without wings. Our capsule is where youll spend your time during the flight. It includes a space gym, cinema, and plenty of other activities to keep you entertained.'
+    text: "A space capsule is an often-crewed spacecraft that uses a blunt-body reentry capsule to reenter the Earth's atmosphere without wings. Our capsule is where you'll spend your time during the flight. It includes a space gym, cinema, and plenty of other activities to keep you entertained."
 };
 
-export const TECH_INFO = [
+export const TECHNOLOGY_INFO = [
     ONE,
     TWO,
     THREE
