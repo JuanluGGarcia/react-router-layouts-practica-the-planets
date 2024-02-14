@@ -5,7 +5,7 @@ import { COLORS } from '../../styles/colors';
 
 const StyledNavLink = styled(NavLink)`
 	text-decoration: none;
-	padding-bottom: 1rem;
+	padding-bottom: 1.5rem;
 
 	/* con active podemos hacer destacar la parte del nav que está activa. Active es una propiedad de NavLink */
 	&.active {
@@ -15,7 +15,10 @@ const StyledNavLink = styled(NavLink)`
 `;
 
 const StyledWraper = styled.div`
-	padding: 2rem 0 3rem 2rem;
+margin: 30px auto;
+/* background-color: lightcoral; */
+	/* padding: rem 0 3rem 2rem; */
+	margin-bottom: 7rem;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -33,9 +36,10 @@ const StyledHr = styled.hr`
 `;
 
 const StyledMenu = styled.div`
-	padding: 1rem 5rem;
+/* background-color: lightblue; */
+	padding: 1.5rem;
 	/* background-color: ${COLORS.HOVER}; */
-    opacity: .9;
+    /* opacity: .9; */
 `;
 
 const StyledLinks = styled.ul`
@@ -48,11 +52,13 @@ const StyledLinks = styled.ul`
 const StyledOptionNumber = styled.span`
     color: ${COLORS.WHITE};
     font-weight: bold;
+	letter-spacing: 2px;
 `;
 
 const StyledOptionText = styled.span`
     color: ${COLORS.WHITE};
-    opacity: .5;
+	letter-spacing: 2px;
+    /* opacity: .8; */
 
 `;
 

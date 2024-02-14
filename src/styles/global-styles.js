@@ -16,7 +16,11 @@ export const GlobalStyles = createGlobalStyle`
   }
   
   body{
-    background-color: #000;
+    width: 90%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: url('/assets/home/background-home-desktop.jpg');
     color: ${COLORS.WHITE};
   }
 
