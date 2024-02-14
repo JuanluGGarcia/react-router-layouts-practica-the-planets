@@ -3,7 +3,7 @@ import { FONTS } from '../../styles/fonts';
 import { COLORS } from '../../styles/colors';
 
 const StyledHomeContainer = styled.div`
-	width: 90%;
+	width: 80%;
 	margin-left:auto;
 	margin-right: auto;
 	display: flex;
@@ -13,7 +13,7 @@ const StyledHomeContainer = styled.div`
 `;
 
 const StyledHomeLeft = styled.div`
-	width: 34%;
+	width: 37%;
 `;
 const StyledSubtitle = styled.h1`
 	font-size: 1.5rem;
@@ -31,7 +31,7 @@ const StyledHomeRight = styled.div``;
 const StyledExplore = styled.h2`
 	font-size: 3rem;
 	font-weight: 100;
-	padding: 100px 40px;
+	padding: 90px 20px;
 	background-color: ${COLORS.WHITE};
 	border-radius: 80%;
 	color: ${COLORS.DARK};
