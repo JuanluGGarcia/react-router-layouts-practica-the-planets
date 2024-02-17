@@ -4,21 +4,23 @@ import { FONTS } from '../../styles/fonts';
 import { COLORS } from '../../styles/colors';
 
 const StyledNavLink = styled(NavLink)`
+
 	text-decoration: none;
 	padding-bottom: 1.5rem;
 
-	/* con active podemos hacer destacar la parte del nav que está activa. Active es una propiedad de NavLink */
 	&.active {
-		/* color: green; */
 		border-bottom: 2px solid ${COLORS.WHITE};
+	}
+	&:hover {
+		border-bottom: 2px solid ${COLORS.HOVER};
 	}
 `;
 
 const StyledWraper = styled.div`
-margin: 30px auto;
 /* background-color: lightcoral; */
-	/* padding: rem 0 3rem 2rem; */
-	margin-bottom: 7rem;
+	position: absolute;
+	padding: 1rem 0 1rem 2rem;
+	width: 100%;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -29,24 +31,24 @@ margin: 30px auto;
 const StyledLogo = styled.div``;
 
 const StyledHr = styled.hr`
+	position: absolute;
     height: 1px;
     width: 40%;
-    margin-left: 2rem;
+    left: 11rem;
     background-color: #fff;
+	z-index: 1;
 `;
 
 const StyledMenu = styled.div`
-/* background-color: lightblue; */
-	padding: 1.5rem;
-	/* background-color: ${COLORS.HOVER}; */
-    /* opacity: .9; */
+	padding: 1.5rem 1.5rem 1.5rem 2.5rem;
+	background: rgba(255, 255, 255, 0.04);
+	backdrop-filter: blur(40.774227142333984px);
 `;
 
 const StyledLinks = styled.ul`
 	display: flex;
 	gap: 2rem;
-	/* justify-content: center;
-    align-items: center; */
+	
 `;
 
 const StyledOptionNumber = styled.span`

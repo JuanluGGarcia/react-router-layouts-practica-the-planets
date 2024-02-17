@@ -1,5 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 import { COLORS } from './colors';
+import { FONTS } from './fonts';
 
 export const GlobalStyles = createGlobalStyle`
   *,
@@ -16,12 +17,19 @@ export const GlobalStyles = createGlobalStyle`
   }
   
   body{
-    width: 90%;
-    max-width: 1200px;
+    /* width: 90%; */
+    /* max-width: 1200px; */
     margin-left: auto;
     margin-right: auto;
-    background-image: url('/assets/home/background-home-desktop.jpg');
+    font-family: ${FONTS.ffPrimary};
     color: ${COLORS.WHITE};
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: ${FONTS.ffSecundary};
+    font-weight: 100;
   }
 
   a{
