@@ -9,6 +9,8 @@ const StyledHomeContainer = styled.div`
 	/* width: 100%; */
 	margin-left:auto;
 	margin-right: auto;
+	padding-top: 100px;
+	padding-inline: 100px;
 	display: flex;
 	justify-content: space-around;
 	align-items: center;

@@ -23,6 +23,7 @@ export const GlobalStyles = createGlobalStyle`
     margin-right: auto;
     font-family: ${FONTS.ffPrimary};
     color: ${COLORS.WHITE};
+    background-color: #000;
   }
 
   h1,

@@ -26,7 +26,9 @@ const Destination = () => {
 	const [tabActive, setTabActive] = useState(0);
 
 	return (
+		
 		<>
+			
 			<StyledContainer>
 				<StyledLeft>
 					<StyledTitleLeft>
@@ -34,53 +36,53 @@ const Destination = () => {
 						<StyledSpanText>PICK YOUR DESTINATION</StyledSpanText>
 					</StyledTitleLeft>
 
-					<StyledImage>
-						<img src={DESTINATION_INFO[tabActive].image} 
+		 			<StyledImage>
+						<img src={DESTINATION_INFO[tabActive].image}
 						     alt={DESTINATION_INFO[tabActive].name} />
-					</StyledImage>
+				 	</StyledImage> 
 				</StyledLeft>
 
 				<StyledRight>
-					<StyledMenu>
-						<nav>
-							<StyledLinks>
+				 	<StyledMenu>
+				 		<nav>
+				 			<StyledLinks>
 								{DESTINATION_INFO.map((destination, index) => (
-									<StyledTab
-										onClick={() => handleTab(setTabActive, index)}
+									<StyledTab	onClick={() => 
+										handleTab(setTabActive, index)}
 										key={destination.id}
 										$active={index === tabActive}
 									>
 										{destination.name}
 									</StyledTab>
 								))}
-							</StyledLinks>
-						</nav>
-					</StyledMenu>
+					 		</StyledLinks>
+					 	</nav>
+					 </StyledMenu>
 					<StyledNamePlanet>{DESTINATION_INFO[tabActive].name}</StyledNamePlanet>
 					<StyledTextPlanet>{DESTINATION_INFO[tabActive].text}</StyledTextPlanet>
 
-					<StyledStats>
-						<StyledStatsDistance>
-							<StyledDistanceTitle>
-								{DESTINATION_INFO[tabActive].stats[0].name}
+					 <StyledStats>
+					 	<StyledStatsDistance>
+					 		<StyledDistanceTitle>
+					 			{DESTINATION_INFO[tabActive].stats[0].name}
 							</StyledDistanceTitle>
 							<StyledDistanceNumber>
 								{DESTINATION_INFO[tabActive].stats[0].value}
-							</StyledDistanceNumber>
+						 	</StyledDistanceNumber>
 						</StyledStatsDistance>
 
 						<StyledStatsTravelTime>
-							<StyledTravelTitle>
-								{DESTINATION_INFO[tabActive].stats[1].name}
+						 	<StyledTravelTitle>
+						 		{DESTINATION_INFO[tabActive].stats[1].name}
 							</StyledTravelTitle>
 							<StyledTravelNumber>
-								{DESTINATION_INFO[tabActive].stats[1].value}
-							</StyledTravelNumber>
-						</StyledStatsTravelTime>
+							 	{DESTINATION_INFO[tabActive].stats[1].value}
+		 					</StyledTravelNumber>
+		 				</StyledStatsTravelTime>
 						
-					</StyledStats>
-				</StyledRight>
-			</StyledContainer>
+		 			</StyledStats>
+		 		</StyledRight>
+		 	</StyledContainer>
 		</>
 	);
 };

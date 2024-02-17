@@ -8,6 +8,8 @@ const StyledContainer = styled.div`
 	height: 100vh;
 	margin-left:auto;
 	margin-right: auto;
+	padding-top: 100px;
+	padding-inline: 100px;
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
@@ -22,39 +24,45 @@ const StyledLeft = styled.div`
 `;
 
 const StyledTitleLeft = styled.div`
-	font-weight: 1.75rem;
+	font-size: 1.75rem;
+	margin-bottom: 1.5rem;
 `;
 
-const StyledSpanNumber = styled.h2`
-	color: ${COLORS.DARK};
+const StyledSpanNumber = styled.span`
+	color: ${COLORS.HOVER};
 `;
 
-const StyledSpanText = styled.h2`
+const StyledSpanText = styled.span`
 	color: ${COLORS.WHITE};
 `;
 
-const StyledImage = styled.div``;
+const StyledImage = styled.div`
+	width: 350px;
+`;
 
 
 const StyledRight = styled.div`
-	width: 50%;
+	width: 40%;
 `;
 
-const StyledMenu = styled.div``;
+const StyledMenu = styled.div`
+	font-size: 1.125rem;
+`;
 
-const StyledLinks = styled.ul``;
+const StyledLinks = styled.ul`
+	display: flex;
+	gap: 2rem;
+	margin-bottom: 2rem;
+`;
 
 const StyledTab = styled.li`
-    width: 100%;
     padding: 1rem;
-    border: 1px solid black;
-    /* Si $active es true le ponemos el color lightcoral a la pestaña si no le ponemos gray */
-    border-bottom: ${({$active}) => ($active ? '#fff' : 'transparent')};
-    /* color: ${({$active}) => ($active ? '#FFF' : 'darkgray')}; */
+    border-bottom: 2px solid ${({$active}) => ($active ? '#fff' : 'transparent')};
     cursor: pointer;
+	
 
 	&:hover {
-		border-bottom: ${({$active}) => ($active ? '#D0D6F9' : 'transparent')};
+		border-bottom: 2px solid ${COLORS.HOVER};
 	}
 `;
 
@@ -63,22 +71,35 @@ const StyledNamePlanet = styled.h1`
 `;
 
 const StyledTextPlanet = styled.p`
+	margin-bottom: 2rem;
+	padding-bottom: 2rem;
+	border-bottom: 1px solid ${COLORS.HOVER};
 	font-size: 1.125rem;
 	color: ${COLORS.HOVER};
 `;
 
-const StyledStats = styled.div``;
+const StyledStats = styled.div`
+	display: flex;
+	gap: 3rem;
+`;
 const StyledStatsDistance = styled.div``;
 const StyledDistanceTitle = styled.p`
 	font-size: 14px;
+	margin-bottom: 5px;
 `;
 const StyledDistanceNumber = styled.p`
 	font-family: ${FONTS.ffPrimary};
-	font-size: 1.75rem;
+	font-size: 1.5rem;
 `;
 const StyledStatsTravelTime = styled.div``;
-const StyledTravelTitle = styled(StyledDistanceTitle);
-const StyledTravelNumber = styled(StyledDistanceNumber);
+const StyledTravelTitle = styled.p`
+	font-size: 14px;
+	margin-bottom: 5px;
+`;
+const StyledTravelNumber = styled.p`
+	font-family: ${FONTS.ffPrimary};
+	font-size: 1.5rem;
+`;
 
 
 export {
