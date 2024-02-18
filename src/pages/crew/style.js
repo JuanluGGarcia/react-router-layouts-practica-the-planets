@@ -8,48 +8,106 @@ const StyledContainer = styled.div`
 	height: 100vh;
 	margin-left:auto;
 	margin-right: auto;
+	padding-top: 100px;
+	padding-inline: 100px;
 	display: flex;
-	justify-content: space-around;
+	justify-content: space-between;
 	align-items: center;
-	/* font-family: ${FONTS.ffPrimary}; */
+	font-family: ${FONTS.ffSecundary};
+	color: ${COLORS.WHITE};
 `;
+
+
 
 const StyledLeft = styled.div`
-	width: 37%;
+	width: 40%;
 `;
-const StyledSubtitle = styled.h1`
-	font-size: 1.5rem;
-`;
-const StyledTitle = styled.h1`
-	font-size: 8rem;
-	font-weight: 100;
-`;
-const StyledText = styled.p`
-	font-family: ${FONTS.ffPrimary};
-	font-size: 1rem;
-`;
-const StyledRight = styled.div``;
 
-const StyledExplore = styled.h2`
-	font-size: 3rem;
-	font-weight: 100;
-	padding: 90px 40px;
-	background-color: ${COLORS.WHITE};
-	border-radius: 80%;
-	color: ${COLORS.DARK};
-	cursor: pointer;
+const StyledTitleLeft = styled.div`
+	font-size: 1.75rem;
+	margin-bottom: 1.5rem;
+`;
 
-	&:hover{
+const StyledSpanNumber = styled.span`
+	color: ${COLORS.HOVER};
+	opacity: 0.3;
+`;
 
+const StyledSpanText = styled.span`
+	color: ${COLORS.WHITE};
+`;
+
+const StyledImage = styled.div`
+`;
+
+
+const StyledRight = styled.div`
+	position: absolute;
+	width: 300px;
+	max-width: 400px;
+	right: 10%;
+	bottom: 0;
+	/* margin-left: auto;
+	margin-right: auto; */
+`;
+
+const StyledLinks = styled.ul`
+	/* padding-left: 0; */
+	display: flex;
+	gap: 2rem;
+	margin-left: 2rem;
+	list-style: disc;
+	
+
+	
+`;
+
+const StyledTab = styled.li`
+    /* padding-left: 0; */
+	font-size: 2rem;
+    cursor: pointer;
+	color: ${({$active}) => ($active ? '#fff' : 'gray')};
+
+	&:hover {
+		color: ${COLORS.HOVER};
 	}
+	
+`;
+
+
+const StyledTextCrew = styled.p`
+	margin-bottom: 2rem;
+	/* padding-bottom: 2rem; */
+	/* border-bottom: 1px solid ${COLORS.HOVER}; */
+	font-size: 1.125rem;
+	color: ${COLORS.HOVER};
+`;
+
+
+const StyledCrewPost = styled.p`
+margin-bottom: .5rem;
+	font-family: ${FONTS.ffPrimary};
+	font-size: 2rem;
+	opacity: 0.3;
+`;
+
+const StyledCrewName = styled.h1`
+	margin-bottom: 1rem;
+	font-family: ${FONTS.ffPrimary};
+	font-size: 2.2rem;
 `;
 
 export {
 	StyledContainer,
 	StyledLeft,
-	StyledSubtitle,
-	StyledTitle,
-	StyledText,
+	StyledTitleLeft,
+	StyledSpanNumber,
+	StyledSpanText,
+	StyledImage,
 	StyledRight,
-	StyledExplore
+	StyledLinks,
+	StyledTab,
+	StyledTextCrew,
+	StyledCrewName,
+	StyledCrewPost
 };

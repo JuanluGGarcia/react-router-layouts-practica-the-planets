@@ -1,34 +1,65 @@
+import { useState } from 'react';
+import { CREW_INFO } from '../../constants/CrewInfo';
 import {
-	StyledExplore,
 	StyledContainer,
+	StyledImage,
 	StyledLeft,
+	StyledLinks,
 	StyledRight,
-	StyledSubtitle,
-	StyledText,
-	StyledTitle
+	StyledSpanNumber,
+	StyledSpanText,
+	StyledCrewPost,
+	StyledCrewName,
+	StyledTab,
+	StyledTextCrew,
+	StyledTitleLeft
 } from './style';
 
 const Crew = () => {
+	const [tabActive, setTabActive] = useState(0);
+
 	return (
 		<>
 			<StyledContainer>
 				<StyledLeft>
-					<StyledSubtitle>SO, YOU WANT TO TRAVEL TO</StyledSubtitle>
-					<StyledTitle>SPACE</StyledTitle>
+					<StyledTitleLeft>
+						<StyledSpanNumber>02 </StyledSpanNumber>
+						<StyledSpanText>MEET YOUR CREW</StyledSpanText>
+					</StyledTitleLeft>
 
-					<StyledText>
-						Let’s face it: if you want to go to space, you might as well
-						genuinely go to outer space and not hover kind of on the edge of it.
-						Well sit back, and relax because we’ll give you a truly out of this
-						world experience!
-					</StyledText>
+					<StyledCrewPost>{CREW_INFO[tabActive].post}</StyledCrewPost>
+					<StyledCrewName>{CREW_INFO[tabActive].name}</StyledCrewName>
+
+					<StyledTextCrew>{CREW_INFO[tabActive].text}</StyledTextCrew>
+
+					<nav>
+						<StyledLinks>
+							{CREW_INFO.map((crew, index) => (
+								<StyledTab
+									onClick={() => handleTab(setTabActive, index)}
+									key={crew.id}
+									$active={index === tabActive}
+									$width={crew.width}
+								></StyledTab>
+							))}
+						</StyledLinks>
+					</nav>
 				</StyledLeft>
 
 				<StyledRight>
-					<StyledExplore>EXPLORE</StyledExplore>
+					<StyledImage>
+						<img
+							src={CREW_INFO[tabActive].image}
+							alt={CREW_INFO[tabActive].name}
+						/>
+					</StyledImage>
 				</StyledRight>
 			</StyledContainer>
 		</>
 	);
+};
+
+const handleTab = (setTabActive, index) => {
+	setTabActive(index);
 };
 export default Crew;

@@ -30,6 +30,7 @@ const StyledTitleLeft = styled.div`
 
 const StyledSpanNumber = styled.span`
 	color: ${COLORS.HOVER};
+	opacity: 0.3;
 `;
 
 const StyledSpanText = styled.span`
