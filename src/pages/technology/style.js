@@ -70,33 +70,20 @@ const StyledNav = styled.div`
 	gap: 2rem;
 `;
 
-// const StyledLinks = styled.ol`
-// 	display: flex;
-// 	flex-direction: column;
-// 	justify-content: center;
-// 	align-items: center;
-// 	gap: 2rem;
-// 	margin-left: 2rem;
-// 	font-size: 1.7rem;
-// `;
 
 const StyledTab = styled.button`
-	/* text-align: center; */
-    display: block;
-    height: 70px;
-    width: 70px;
-    /* border: none; */
-    padding: 2px;
-    border-radius: 50%;
-    font-size: 1.7rem;
-    overflow: hidden;
-	background-color: ${({ $active }) => ($active ? '#fff' : '#0B0D17')};
-    border: 2px solid ${({ $active }) => ($active ? '#fff' : '#B0D17')};
-    color: ${({ $active }) => ($active ? '#0B0D17' : '#fff')};
+	border-radius: 50%;
+  	padding: 1em 1.3em;
+  	border: none;
+  	background-color: ${({ $active }) => ($active ? '#fff' : 'transparent')};
+	color: ${({ $active }) => ($active ? '#0B0D17' : '#fff')};
+	border: 1px solid ${({ $active }) => ($active ? '#fff' : 'gray')};
+    
+	
 	cursor: pointer;
-	/* &:hover {
-		color: ${COLORS.HOVER};
-	} */
+	&:hover {
+		border: 1px solid ${COLORS.WHITE};
+	}
 `;
 
 const StyledTechSubTitle = styled.p`
@@ -126,7 +113,6 @@ export {
 	StyledImageContainer,
 	StyledImage,
 	StyledRight,
-	// StyledLinks,
 	StyledTab,
 	StyledTechText,
 	StyledTechTitle,
