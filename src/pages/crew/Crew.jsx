@@ -39,7 +39,6 @@ const Crew = () => {
 									onClick={() => handleTab(setTabActive, index)}
 									key={crew.id}
 									$active={index === tabActive}
-									$width={crew.width}
 								></StyledTab>
 							))}
 						</StyledLinks>
